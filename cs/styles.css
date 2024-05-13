@@ -151,20 +151,63 @@ body {
 /* --------- Portfolio --------- */
 .contenido-portfolio {
     display: flex;
+    align-items: center;
 }
 
+/* Estilos para el carrusel y las tarjetas */
 .portfolio-carousel {
-    /* background: red; */
-    width: 100%;
-    margin: 0 30px 30px;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    width: 80%; /* Carrusel ocupa el 70% del contenedor */
+    margin: 0 auto;
+    padding: 20px 0; /* Espacio arriba y abajo del carrusel */
 }
-/* .portfolio-card {
-    height: 200px;
-    width: 200px;
-    background: linear-gradient(
-        125.84deg,
-        rgba(255, 255, 255, 0.4) 1.44%,
-        rgba(255, 255, 255, 0.234909) 37.38%,
-        rgba(255, 255, 255, 0.1) 77.03%
-    );
-} */
+.portfolio-card {
+    margin-right: 20px; /* Espacio entre tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: var(--square-intro-dark); /* Color de fondo */
+    height: 100px;
+    width: 100px;
+
+}
+.portfolio-card a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+.portfolio-card a:hover {
+    color: var(--color-titulos);
+    transform: scale(1.1); 
+}
+
+.next, .prev {
+    font-size: 40px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.next:hover, .prev:hover {
+    color: var(--color-titulos);
+    transform: scale(1.2);
+}
+
+.show-more {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    background-color: var(--color-titulos);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: white;
+    color: var(--color-titulos);
+}
