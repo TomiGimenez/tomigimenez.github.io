@@ -1,0 +1,170 @@
+:root {
+    --dark-bg: #212121;
+    --square-intro-dark: #525252;
+    --color-titulos: #1a7eaf;
+  --dark-gradient: linear-gradient(
+    110deg,
+    #171717 0.48%,
+    rgba(54, 54, 54, 0.8) 98.57%
+  );
+}
+
+/* Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Nav y header */
+.header {
+    background: var(--dark-gradient);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+.nav .logo img {
+    width: auto;
+    height: 80px;
+}
+.nav .logo:hover {
+    transform: scale(0.9);
+}
+.nav-link-div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.nav-link-div a{
+    text-decoration: none;
+    color: white;
+}
+.nav-link-div a:hover {
+    cursor: pointer;
+    color: var(--color-titulos);
+}
+
+/* Presentacion */
+.presentation-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 450px;
+}
+.presentation-div .greeting{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.presentation-div .name {
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: var(--color-titulos);
+}
+.presentation-div .occupation {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.presentation-img {
+    display: flex;
+    justify-content: center;
+}
+.presentation-img .box-img {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: var(--square-intro-dark);
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.25);
+}
+.presentation-img img {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    filter: saturate(0) contrast(120%) brightness(75%);
+    pointer-events: none;
+}
+
+/* Side card */
+.side-card {
+    background-color: var(--square-intro-dark);
+    width: 300px;
+    padding: 15px 40px;
+    margin: 40px 0;
+    font-size: 18px;
+    text-align: end;
+    position: relative;
+}
+.side-card::after {
+    content: "";
+    width: 15px;
+    height: 50.8px;
+    background-color: var(--color-titulos);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+/* --------- About me --------- */
+.about-me .contenido-about-me {
+    font-size: 20px;
+    width: 75%;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 auto;
+}
+.about-me .about-me-media {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-me-media a {
+    color: white;
+    font-size: 60px;
+    transition: all 0.2s;
+}
+.about-me-media a:hover {
+    color: var(--color-titulos);
+}
+
+/* Habilidades */
+/* VER COMO HACER PARA QUE QUEDEN COMO TARJETAS CON CADA HABILIDAD */
+
+/* --------- Portfolio --------- */
+.contenido-portfolio {
+    display: flex;
+}
+
+.portfolio-carousel {
+    /* background: red; */
+    width: 100%;
+    margin: 0 30px 30px;
+}
+/* .portfolio-card {
+    height: 200px;
+    width: 200px;
+    background: linear-gradient(
+        125.84deg,
+        rgba(255, 255, 255, 0.4) 1.44%,
+        rgba(255, 255, 255, 0.234909) 37.38%,
+        rgba(255, 255, 255, 0.1) 77.03%
+    );
+} */
