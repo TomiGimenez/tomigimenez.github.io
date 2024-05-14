@@ -6,7 +6,7 @@ $(document).ready(function(){
         prevArrow: $('.prev'), // Elemento para la flecha izquierda
         nextArrow: $('.next'), // Elemento para la flecha derecha
         infinite: true, // desplazamiento infinito
-        slidesToShow: 3, // Muestra 3 proyectos a la vez
+        slidesToShow: 2, // Muestra 3 proyectos a la vez
         slidesToScroll: 1, // Desplaza 1 proyecto a la vez
         autoplay: true, // Reproducción automática
         autoplaySpeed: 5000, // Velocidad de reproducción (5 segundos)

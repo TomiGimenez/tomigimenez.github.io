@@ -17,11 +17,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
 
 body {
     background-color: var(--dark-bg);
     font-family: 'Poppins', sans-serif;
     color: white;
+    transition: 0.3s ease all;
 }
 
 .contenedor {
@@ -157,30 +162,44 @@ body {
 /* Estilos para el carrusel y las tarjetas */
 .portfolio-carousel {
     scroll-behavior: smooth; /* Desplazamiento suave */
-    width: 80%; /* Carrusel ocupa el 70% del contenedor */
+    width: 80%; /* Carrusel ocupa el 80% del contenedor */
     margin: 0 auto;
     padding: 20px 0; /* Espacio arriba y abajo del carrusel */
 }
+.slick-dots li button {
+    background: grey !important;
+    border-radius: 5px;
+}
 .portfolio-card {
-    margin-right: 20px; /* Espacio entre tarjetas */
-    border-radius: 10px; /* Bordes redondeados */
+    margin-right: 30px; /* Espacio entre tarjetas */
+    border-radius: 20px; /* Bordes redondeados */
     background-color: var(--square-intro-dark); /* Color de fondo */
-    height: 100px;
-    width: 100px;
+    background-size: cover; /* Ajustar el tamaño de la imagen */
+    background-position: center; /* Centrar la imagen */
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+    display: flex !important;
+    justify-content: center;
+    align-items:end;
+    height: 300px !important;
 
 }
+.portfolio-card:hover {
+    filter: grayscale(0);
+}
+
 .portfolio-card a {
     text-decoration: none;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    width: 100%;
+    background-color: var(--color-titulos);
+    padding: 10px 100px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
 }
 .portfolio-card a:hover {
-    color: var(--color-titulos);
-    transform: scale(1.1); 
+    color: black;
+    transform: scale(1.1);
 }
 
 .next, .prev {
@@ -198,7 +217,7 @@ body {
     justify-content: flex-end;
 }
 
-button {
+.show-more button {
     background-color: var(--color-titulos);
     color: white;
     border: none;
@@ -207,7 +226,105 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-button:hover {
+.show-more button:hover {
     background-color: white;
     color: var(--color-titulos);
 }
+/* ----------- Contacto ----------- */
+.contact {
+    display: flex;
+    align-items: center;
+}
+.contenido-contact {
+    max-width: 50%;
+    min-width: 250px;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.contact-media a {
+    color: grey;
+    font-size: 30px;
+    margin-right: 15px;
+    transition: all 0.2s;
+}
+.contact-media a:hover {
+    color: var(--color-titulos);
+}
+
+/* Formulario */
+.form {
+    width: 400px;
+    background-color: var(--square-intro-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+.form-input {
+    background-color: grey;
+    border: none;
+    padding: 7px;
+    color: white;
+    border-radius: 2px;
+}
+.form-input-message {
+    height: 150px;
+    resize: none;
+}
+.form-submit {
+    background-color: var(--color-titulos);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.form-submit:hover {
+    background-color: white;
+    color: var(--color-titulos);
+}
+
+/* -------- Footer --------*/
+.footer {
+    background-color: var(--color-titulos);
+    color: white;
+    margin-top: 20px;
+    padding: 80px 0;
+}
+.footer-style {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+}
+.logo-name p {
+    font-size: 20px;
+}
+.logo-name img {
+    width: 70px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+.footer-nav a:hover {
+    cursor: pointer;
+    color: black;
+}
+.copyright {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+  
