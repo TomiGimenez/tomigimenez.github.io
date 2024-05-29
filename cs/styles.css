@@ -151,8 +151,39 @@ body {
 }
 
 /* Habilidades */
-/* VER COMO HACER PARA QUE QUEDEN COMO TARJETAS CON CADA HABILIDAD */
+.contenido-habilidades h2 {
+    margin-bottom: 10px;
+}
 
+.tarjetas-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.tarjeta-habilidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    color: black;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    flex: 1 0 100px; /* Flex-grow: 1, flex-shrink: 0, flex-basis: 100px */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+}
+
+.tarjeta-habilidad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 /* --------- Portfolio --------- */
 .contenido-portfolio {
     display: flex;
