@@ -1,13 +1,15 @@
 :root {
-    --dark-bg: #212121;
+    --dark-bg: #1a3149; /* Azul oscuro */
     --square-intro-dark: #525252;
-    --color-titulos: #1a7eaf;
-  --dark-gradient: linear-gradient(
+    --color-titulo-header: #58a1c6;
+    --color-titulos: #1a6185;
+    --dark-gradient: linear-gradient(
     110deg,
     #171717 0.48%,
     rgba(54, 54, 54, 0.8) 98.57%
-  );
+    );
 }
+
 
 /* Reset */
 *,
@@ -64,7 +66,7 @@ body {
 }
 .nav-link-div a:hover {
     cursor: pointer;
-    color: var(--color-titulos);
+    color: var(--color-titulo-header);
 }
 
 /* Presentacion */
@@ -75,6 +77,9 @@ body {
     width: 60%;
     height: 450px;
 }
+.presentation-content {
+    margin-right: 15px;
+}
 .presentation-div .greeting{
     font-size: 25px;
     margin-bottom: 20px;
@@ -82,7 +87,8 @@ body {
 .presentation-div .name {
     font-size: 45px;
     margin-bottom: 20px;
-    color: var(--color-titulos);
+    color: var(--color-titulo-header);
+    white-space: nowrap;
 }
 .presentation-div .occupation {
     font-size: 15px;
@@ -223,10 +229,14 @@ body {
     text-decoration: none;
     color: white;
     background-color: var(--color-titulos);
-    padding: 10px 100px;
+    width: 300px;
+    height: 30px;
     border-radius: 5px;
     transition: all 0.3s ease;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .portfolio-card a:hover {
     color: black;
@@ -265,12 +275,13 @@ body {
 .contact {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 .contenido-contact {
     max-width: 50%;
     min-width: 250px;
-    margin-left: 40px;
-    margin-right: 20px;
+    /* margin-left: 40px;
+    margin-right: 20px; */
 }
 
 .contact-media a {
@@ -359,3 +370,43 @@ body {
     gap: 8px;
   }
   
+/* media queries */
+
+@media (max-width: 1080px) {
+    .header{
+        padding-bottom: 20px;
+    }
+    .presentation-div {
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .presentation-div .presentation-content {
+        margin-top: 20px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+    .contenido-contact {
+        text-align: center;
+        max-width: 90%;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 880px) {
+    .tarjeta-habilidad {
+        min-width: 100px;
+    }   
+}
+
+@media (max-width: 560px) {
+    .side-card {
+        width: 200px;
+    }
+    .about-me .contenido-about-me {
+        width: 100%;
+    }
+}
